@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PIXORA DIGITAL — Next-Gen Website Development Agency</title>
+  <meta name="description" content="Pixora Digital crafts high-converting, custom-engineered websites, web applications, and digital brand experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated Background Layer -->
+  <div class="bg-system" aria-hidden="true">
+    <canvas id="bg-canvas"></canvas>
+    <div class="aurora-orb orb-purple"></div>
+    <div class="aurora-orb orb-cyan"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" data-route="home" aria-label="Pixora Digital Home">
+        <!-- Custom Premium SVG Logo -->
+        <svg class="logo-mark" width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="pixoraGrad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#A855F7" />
+              <stop offset="50%" stop-color="#6366F1" />
+              <stop offset="100%" stop-color="#06B6D4" />
+            </linearGradient>
+            <linearGradient id="pixoraGlow" x1="12" y1="10" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#22D3EE" />
+              <stop offset="100%" stop-color="#8B5CF6" />
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="44" height="44" rx="12" fill="#0B0B14" stroke="url(#pixoraGrad)" stroke-width="2" />
+          <path d="M16 35V13H26.5C30.9183 13 34.5 16.5817 34.5 21C34.5 25.4183 30.9183 29 26.5 29H21.5" stroke="url(#pixoraGrad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+          <rect x="14.5" y="31.5" width="4" height="4" rx="1" fill="url(#pixoraGlow)" />
+          <circle cx="26.5" cy="21" r="2.6" fill="#22D3EE" />
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">PIXORA</span>
+          <span class="logo-sub">DIGITAL</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-route="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-route="about">About</a></li>
+          <li><a href="#services" class="nav-link" data-route="services">Services</a></li>
+          <li><a href="#portfolio" class="nav-link" data-route="portfolio">Portfolio</a></li>
+          <li><a href="#pricing-section" class="nav-link" data-scroll="pricing-section">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#inquiry-section" class="btn btn-primary btn-sm" data-scroll="inquiry-section">Start a Project</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Views -->
+  <main id="app-main">
+
+    <!-- ==================== HOME PAGE ==================== -->
+    <section class="page-view active" id="page-home" data-page="home">
+      <!-- Hero Section -->
+      <div class="hero-section container">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for Q4 &amp; Q1 Web Builds</span>
+          </div>
+          <h1 class="hero-title">
+            We Engineer <span class="gradient-text">High-Impact</span> Digital Experiences.
+          </h1>
+          <p class="hero-subtitle">
+            Pixora Digital is a full-cycle website development agency crafting ultra-fast custom websites, interactive web apps, and scalable digital platforms for ambitious brands.
+          </p>
+          <div class="hero-cta">
+            <a href="#inquiry-section" class="btn btn-primary" data-scroll="inquiry-section">
+              <span>Launch Your Website</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#portfolio" class="btn btn-glass" data-route="portfolio">Explore Portfolio</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <strong>99/100</strong>
+              <span>Avg. Lighthouse Speed</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <strong>60+</strong>
+              <span>Custom Sites Shipped</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <strong>100%</strong>
+              <span>Bespoke Codebase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase Card -->
+        <div class="hero-visual">
+          <div class="browser-mockup glass-card">
+            <div class="browser-topbar">
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-url">pixoradigital.studio/build</div>
+            </div>
+            <div class="browser-body">
+              <div class="code-preview-header">
+                <span class="tag-cyan">UI/UX ARCHITECTURE</span>
+                <span class="tag-purple">FULL-STACK READY</span>
+              </div>
+              <div class="visual-metrics-grid">
+                <div class="mini-stat">
+                  <small>Conversion Lift</small>
+                  <div class="mini-val">+184%</div>
+                  <div class="progress-bar"><span style="width: 86%"></span></div>
+                </div>
+                <div class="mini-stat">
+                  <small>Load Time</small>
+                  <div class="mini-val">0.4s</div>
+                  <div class="progress-bar cyan"><span style="width: 95%"></span></div>
+                </div>
+              </div>
+              <div class="featured-mini-project">
+                <div>
+                  <span class="mini-label">LATEST LAUNCH</span>
+                  <h4>URBAN THREAD</h4>
+                  <p>Custom Brand Showcase &amp; Interactive Lookbook</p>
+                </div>
+                <button class="btn btn-glass btn-xs open-urban-demo">Live Preview</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Home Capabilities Strip -->
+      <div class="container section-pad">
+        <div class="section-header center">
+          <span class="eyebrow">WHAT WE DO</span>
+          <h2>End-to-End Web Development</h2>
+          <p>No bloated templates. Every pixel and line of code is crafted to drive authority and revenue.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <article class="glass-card service-card">
+            <div class="icon-box purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Custom Web Engineering</h3>
+            <p>Clean, semantic HTML5, modern CSS, React/Next.js, and headless architectures built for speed and scale.</p>
+            <a href="#services" class="text-link" data-route="services">View Capabilities &rarr;</a>
+          </article>
+
+          <article class="glass-card service-card">
+            <div class="icon-box cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>UI/UX &amp; Motion Design</h3>
+            <p>Editorial layouts, dark-mode aesthetics, interactive micro-animations, and conversion-focused wireframing.</p>
+            <a href="#services" class="text-link" data-route="services">View Capabilities &rarr;</a>
+          </article>
+
+          <article class="glass-card service-card">
+            <div class="icon-box gradient">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Performance &amp; SEO Core</h3>
+            <p>Technical SEO schema, Core Web Vitals optimization, accessibility compliance, and rock-solid security.</p>
+            <a href="#services" class="text-link" data-route="services">View Capabilities &rarr;</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Home Spotlight: Urban Thread -->
+      <div class="container section-pad">
+        <div class="spotlight-card glass-card">
+          <div class="spotlight-info">
+            <span class="eyebrow">FEATURED AGENCY CASE STUDY</span>
+            <h2>URBAN THREAD — Editorial Web Experience</h2>
+            <p>
+              We partnered with Urban Thread to architect a bold, street-luxury digital flagship website featuring interactive lookbook previews, fluid typography, and sub-second page transitions.
+            </p>
+            <ul class="check-list">
+              <li>Custom interactive lookbook &amp; collection showcase</li>
+              <li>98/100 Mobile Performance Score</li>
+              <li>3.2x Increase in Average Session Duration</li>
+            </ul>
+            <div class="spotlight-actions">
+              <button class="btn btn-primary open-urban-demo">Launch Interactive Demo</button>
+              <a href="#portfolio" class="btn btn-glass" data-route="portfolio">All Projects</a>
+            </div>
+          </div>
+          <div class="spotlight-preview">
+            <div class="urban-card-art">
+              <div class="urban-badge">CLIENT WORK • 2026</div>
+              <div class="urban-title-art">URBAN<br />THREAD</div>
+              <div class="urban-sub-art">NEO-TOKYO STREETWEAR EDITORIAL</div>
+              <button class="urban-play-btn open-urban-demo" aria-label="Open Urban Thread Interactive Demo">
+                <span>Preview Site</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT PAGE ==================== -->
+    <section class="page-view" id="page-about" data-page="about">
+      <div class="container page-header">
+        <span class="eyebrow">ABOUT PIXORA DIGITAL</span>
+        <h1>A Studio Built on <span class="gradient-text">Precision &amp; Craft</span></h1>
+        <p class="lead-text">
+          We are a collective of senior web engineers, interface designers, and digital strategists obsessed with turning complex ideas into effortless web experiences.
+        </p>
+      </div>
+
+      <div class="container section-pad-sm">
+        <div class="about-grid">
+          <div class="glass-card about-story">
+            <h2>Why Brands Choose Pixora</h2>
+            <p>
+              Most agencies hand clients recycled themes patched together with heavy plugins. At <strong>Pixora Digital</strong>, every project starts from a clean architectural blueprint tailored specifically to your business goals, audience behavior, and brand voice.
+            </p>
+            <p>
+              From agile startups needing a flagship launch site to established enterprises modernizing legacy platforms, we combine bold visual identity with battle-tested front-end and back-end engineering.
+            </p>
+            <div class="about-stats-row">
+              <div>
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Years Shipping Web Products</span>
+              </div>
+              <div>
+                <span class="stat-num">98%</span>
+                <span class="stat-label">Client Retention Rate</span>
+              </div>
+              <div>
+                <span class="stat-num">24h</span>
+                <span class="stat-label">Dedicated Support SLA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card process-card">
+            <h3>Our 4-Step Delivery Framework</h3>
+            <div class="process-steps">
+              <div class="step-item">
+                <span class="step-num">01</span>
+                <div>
+                  <h4>Discovery &amp; Architecture</h4>
+                  <p>Competitor audit, user flow mapping, and technical stack planning.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-num">02</span>
+                <div>
+                  <h4>UI/UX Design Systems</h4>
+                  <p>Interactive Figma prototypes with bespoke typography and motion specs.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-num">03</span>
+                <div>
+                  <h4>Clean Full-Stack Build</h4>
+                  <p>Responsive front-end engineering, CMS integration, and API wiring.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-num">04</span>
+                <div>
+                  <h4>QA, Launch &amp; Growth</h4>
+                  <p>Cross-device testing, SEO indexing, analytics, and post-launch care.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container section-pad-sm">
+        <div class="section-header center">
+          <span class="eyebrow">OUR TECH STACK</span>
+          <h2>Modern Tools We Engineer With</h2>
+        </div>
+        <div class="tech-pills">
+          <span class="tech-pill">HTML5 / CSS3</span>
+          <span class="tech-pill">JavaScript (ES6+)</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">React &amp; Next.js</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Tailwind CSS</span>
+          <span class="tech-pill">GSAP Motion</span>
+          <span class="tech-pill">Headless CMS</span>
+          <span class="tech-pill">PostgreSQL</span>
+          <span class="tech-pill">Vercel / AWS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES PAGE ==================== -->
+    <section class="page-view" id="page-services" data-page="services">
+      <div class="container page-header">
+        <span class="eyebrow">OUR SERVICES</span>
+        <h1>Digital Solutions Engineered for <span class="gradient-text">Growth</span></h1>
+        <p class="lead-text">
+          Specialized website development services designed for clarity, speed, and measurable conversion.
+        </p>
+      </div>
+
+      <div class="container section-pad-sm">
+        <div class="services-detailed-grid">
+          <article class="glass-card service-detail-card">
+            <div class="service-top">
+              <span class="service-code">01 / WEB DEVELOPMENT</span>
+              <div class="icon-box purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+            </div>
+            <h3>Custom Business Websites</h3>
+            <p>Tailored corporate, agency, and brand websites engineered from scratch for speed, credibility, and lead generation.</p>
+            <ul class="check-list">
+              <li>Responsive desktop, tablet &amp; mobile layouts</li>
+              <li>Custom animations &amp; interactive UI</li>
+              <li>On-page technical SEO foundation</li>
+            </ul>
+            <a href="#inquiry-section" class="btn btn-glass btn-sm service-select-btn" data-service="Custom Business Website">Inquire About This</a>
+          </article>
+
+          <article class="glass-card service-detail-card">
+            <div class="service-top">
+              <span class="service-code">02 / WEB APPS</span>
+              <div class="icon-box cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+            </div>
+            <h3>SaaS &amp; Custom Web Portals</h3>
+            <p>Interactive dashboards, client portals, booking engines, and scalable web applications powered by modern APIs.</p>
+            <ul class="check-list">
+              <li>Authentication &amp; role-based access</li>
+              <li>Real-time data visualization &amp; APIs</li>
+              <li>Scalable cloud deployment</li>
+            </ul>
+            <a href="#inquiry-section" class="btn btn-glass btn-sm service-select-btn" data-service="SaaS / Web Application">Inquire About This</a>
+          </article>
+
+          <article class="glass-card service-detail-card">
+            <div class="service-top">
+              <span class="service-code">03 / UI/UX DESIGN</span>
+              <div class="icon-box gradient">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+              </div>
+            </div>
+            <h3>UI/UX &amp; Website Redesign</h3>
+            <p>Transform outdated, slow websites into sleek, modern digital flagships that captivate users and boost conversions.</p>
+            <ul class="check-list">
+              <li>UX audit &amp; conversion heatmapping</li>
+              <li>Full Figma design system &amp; style guide</li>
+              <li>Zero-downtime migration &amp; redirects</li>
+            </ul>
+            <a href="#inquiry-section" class="btn btn-glass btn-sm service-select-btn" data-service="UI/UX Redesign">Inquire About This</a>
+          </article>
+
+          <article class="glass-card service-detail-card">
+            <div class="service-top">
+              <span class="service-code">04 / OPTIMIZATION</span>
+              <div class="icon-box purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <h3>Speed, SEO &amp; Maintenance</h3>
+            <p>Keep your digital presence ahead with ongoing performance tuning, uptime monitoring, security hardening, and feature updates.</p>
+            <ul class="check-list">
+              <li>Core Web Vitals 95+ optimization</li>
+              <li>Monthly backups &amp; security audits</li>
+              <li>Priority developer support</li>
+            </ul>
+            <a href="#inquiry-section" class="btn btn-glass btn-sm service-select-btn" data-service="Speed & Maintenance Retainer">Inquire About This</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO PAGE ==================== -->
+    <section class="page-view" id="page-portfolio" data-page="portfolio">
+      <div class="container page-header">
+        <span class="eyebrow">SELECTED WORK</span>
+        <h1>Websites Crafted by <span class="gradient-text">Pixora Digital</span></h1>
+        <p class="lead-text">
+          Explore custom websites and interactive web platforms engineered for modern brands.
+        </p>
+
+        <div class="portfolio-filters" role="group" aria-label="Filter Portfolio Projects">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="brand">Brand &amp; Editorial</button>
+          <button class="filter-btn" data-filter="saas">SaaS &amp; Web Apps</button>
+          <button class="filter-btn" data-filter="corporate">Corporate</button>
+        </div>
+      </div>
+
+      <div class="container section-pad-sm">
+        <div class="portfolio-grid">
+          <!-- Featured Demo Project: URBAN THREAD -->
+          <article class="glass-card project-card featured-project" data-category="brand">
+            <div class="project-thumb urban-thumb">
+              <div class="project-overlay-badge">INTERACTIVE DEMO AVAILABLE</div>
+              <div class="thumb-art-text">
+                <span>URBAN THREAD</span>
+                <small>STREET-LUXURY DIGITAL FLAGSHIP</small>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Brand Website</span>
+                <span>Interactive Lookbook</span>
+                <span>Custom Motion</span>
+              </div>
+              <h3>URBAN THREAD</h3>
+              <p>
+                A high-fashion streetwear brand showcase website built with editorial typography, interactive collection switchers, and ultra-smooth lookbook transitions.
+              </p>
+              <div class="project-footer">
+                <button class="btn btn-primary btn-sm open-urban-demo">Open Live Demo</button>
+                <span class="project-metric">+210% Engagement</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="glass-card project-card" data-category="saas">
+            <div class="project-thumb nova-thumb">
+              <div class="thumb-art-text">
+                <span>NOVAPULSE AI</span>
+                <small>FINTECH ANALYTICS PLATFORM</small>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>SaaS Web App</span>
+                <span>React + TS</span>
+              </div>
+              <h3>NovaPulse Financial Cloud</h3>
+              <p>
+                Real-time treasury dashboard and marketing website designed to simplify multi-currency enterprise cashflow tracking.
+              </p>
+              <div class="project-footer">
+                <a href="#inquiry-section" class="btn btn-glass btn-sm" data-scroll="inquiry-section">Request Similar Build</a>
+                <span class="project-metric">0.3s Load Time</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="glass-card project-card" data-category="corporate">
+            <div class="project-thumb vertex-thumb">
+              <div class="thumb-art-text">
+                <span>VERTEX ARCH</span>
+                <small>ARCHITECTURAL STUDIO</small>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Corporate Site</span>
+                <span>Headless CMS</span>
+              </div>
+              <h3>Vertex Spatial Studio</h3>
+              <p>
+                Minimalist architectural portfolio featuring spatial project galleries, interactive blueprints, and client consultation scheduling.
+              </p>
+              <div class="project-footer">
+                <a href="#inquiry-section" class="btn btn-glass btn-sm" data-scroll="inquiry-section">Request Similar Build</a>
+                <span class="project-metric">99/100 SEO Score</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="glass-card project-card" data-category="saas">
+            <div class="project-thumb medix-thumb">
+              <div class="thumb-art-text">
+                <span>AEROMEDIX</span>
+                <small>TELEHEALTH BOOKING PORTAL</small>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Web Portal</span>
+                <span>API Integration</span>
+              </div>
+              <h3>AeroMedix Patient Hub</h3>
+              <p>
+                HIPAA-conscious appointment scheduling web application connecting patients with specialists through an intuitive responsive interface.
+              </p>
+              <div class="project-footer">
+                <a href="#inquiry-section" class="btn btn-glass btn-sm" data-scroll="inquiry-section">Request Similar Build</a>
+                <span class="project-metric">45K+ Monthly Visits</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SHARED PRICING SECTION ==================== -->
+    <section class="shared-section container section-pad" id="pricing-section">
+      <div class="section-header center">
+        <span class="eyebrow">TRANSPARENT INVESTMENT</span>
+        <h2>Web Development Packages</h2>
+        <p>Flexible agency tiers crafted for startups, growing brands, and enterprise platforms.</p>
+
+        <div class="currency-toggle" role="group" aria-label="Currency Selector">
+          <button class="curr-btn active" data-currency="USD">USD ($)</button>
+          <button class="curr-btn" data-currency="PKR">PKR (₨)</button>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter Tier -->
+        <article class="glass-card pricing-card">
+          <div class="plan-header">
+            <span class="plan-badge">LAUNCHPAD</span>
+            <h3>Starter Brand Site</h3>
+            <p>Ideal for startups, creators, and local businesses needing a sharp digital presence.</p>
+          </div>
+          <div class="plan-price">
+            <span class="price-val" data-usd="$950" data-pkr="₨265,000">$950</span>
+            <span class="price-term">/ one-time project</span>
+          </div>
+          <ul class="check-list">
+            <li>Up to 5 Custom Designed Pages</li>
+            <li>Mobile-First Responsive Architecture</li>
+            <li>Contact / Lead Capture Integration</li>
+            <li>WhatsApp &amp; Social Integration</li>
+            <li>Basic SEO &amp; Speed Optimization</li>
+            <li>14-Day Delivery Timeline</li>
+          </ul>
+          <button class="btn btn-glass full-width select-plan-btn" data-plan="Launchpad ($950 / ₨265,000)">Select Launchpad</button>
+        </article>
+
+        <!-- Growth Tier (Popular) -->
+        <article class="glass-card pricing-card popular">
+          <div class="popular-ribbon">MOST POPULAR</div>
+          <div class="plan-header">
+            <span class="plan-badge cyan">GROWTH STUDIO</span>
+            <h3>Custom Agency Website</h3>
+            <p>Full bespoke design, motion interactions, and CMS control built to outperform competitors.</p>
+          </div>
+          <div class="plan-price">
+            <span class="price-val" data-usd="$2,400" data-pkr="₨670,000">$2,400</span>
+            <span class="price-term">/ one-time project</span>
+          </div>
+          <ul class="check-list">
+            <li>Up to 12 Bespoke Pages + Blog/Portfolio CMS</li>
+            <li>Custom Animations &amp; Interactive UI</li>
+            <li>Technical SEO Schema &amp; Analytics</li>
+            <li>95+ Google Lighthouse Performance</li>
+            <li>30 Days Priority Post-Launch Support</li>
+            <li>3–4 Weeks Delivery Timeline</li>
+          </ul>
+          <button class="btn btn-primary full-width select-plan-btn" data-plan="Growth Studio ($2,400 / ₨670,000)">Select Growth Studio</button>
+        </article>
+
+        <!-- Enterprise Tier -->
+        <article class="glass-card pricing-card">
+          <div class="plan-header">
+            <span class="plan-badge">ENTERPRISE</span>
+            <h3>Full-Stack Web Platform</h3>
+            <p>Complex web apps, custom dashboards, API integrations, and scalable cloud infrastructure.</p>
+          </div>
+          <div class="plan-price">
+            <span class="price-val" data-usd="$4,800+" data-pkr="₨1,340,000+">$4,800+</span>
+            <span class="price-term">/ custom scope</span>
+          </div>
+          <ul class="check-list">
+            <li>Unlimited Architecture &amp; Custom Flows</li>
+            <li>React / Next.js + Custom Backend API</li>
+            <li>User Authentication &amp; Admin Dashboards</li>
+            <li>Dedicated UI/UX Designer &amp; Lead Dev</li>
+            <li>90 Days SLA &amp; Staging Environments</li>
+            <li>Custom Milestone Timeline</li>
+          </ul>
+          <button class="btn btn-glass full-width select-plan-btn" data-plan="Enterprise Custom ($4,800+ / ₨1.34M+)">Book Custom Quote</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== CUSTOMER INQUIRY SECTION ==================== -->
+    <section class="shared-section container section-pad" id="inquiry-section">
+      <div class="inquiry-wrapper glass-card">
+        <div class="inquiry-info">
+          <span class="eyebrow">START YOUR PROJECT</span>
+          <h2>Let’s Build Something <span class="gradient-text">Extraordinary</span></h2>
+          <p>
+            Tell us about your vision, timeline, and goals. A senior strategist from Pixora Digital will respond within 24 hours with a tailored roadmap.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-row">
+              <div class="icon-box purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <small>Direct Email</small>
+                <strong>hello@pixoradigital.com</strong>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="icon-box cyan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div>
+                <small>WhatsApp Studio Desk</small>
+                <strong>+92 300 123 4567</strong>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/923001234567?text=Hi%20Pixora%20Digital!%20I%20would%20like%20to%20discuss%20a%20website%20development%20project."
+             target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-inline">
+            Chat Instantly on WhatsApp &rarr;
+          </a>
+        </div>
+
+        <form class="inquiry-form" id="inquiry-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="client-name">Full Name *</label>
+              <input type="text" id="client-name" name="name" placeholder="e.g. Ayesha Khan" required />
+            </div>
+            <div class="form-group">
+              <label for="client-email">Work Email *</label>
+              <input type="email" id="client-email" name="email" placeholder="you@company.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="client-phone">Phone / WhatsApp</label>
+              <input type="tel" id="client-phone" name="phone" placeholder="+92 300 0000000" />
+            </div>
+            <div class="form-group">
+              <label for="client-company">Company / Brand</label>
+              <input type="text" id="client-company" name="company" placeholder="Your Brand Name" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="project-service">Service Needed *</label>
+              <select id="project-service" name="service" required>
+                <option value="">Select a service...</option>
+                <option value="Custom Business Website">Custom Business Website</option>
+                <option value="SaaS / Web Application">SaaS / Web Application</option>
+                <option value="UI/UX Redesign">UI/UX Website Redesign</option>
+                <option value="Speed & Maintenance Retainer">Speed &amp; Maintenance Retainer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="project-budget">Estimated Package / Budget</label>
+              <select id="project-budget" name="budget">
+                <option value="Not Decided Yet">Not Decided Yet</option>
+                <option value="Launchpad ($950 / ₨265,000)">Launchpad ($950 / ₨265,000)</option>
+                <option value="Growth Studio ($2,400 / ₨670,000)">Growth Studio ($2,400 / ₨670,000)</option>
+                <option value="Enterprise Custom ($4,800+ / ₨1.34M+)">Enterprise Custom ($4,800+ / ₨1.34M+)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="project-details">Project Brief &amp; Goals *</label>
+            <textarea id="project-details" name="details" rows="4" placeholder="Tell us about your website goals, target launch date, or reference sites you admire..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary full-width" id="submit-inquiry-btn">
+              <span>Send Project Inquiry</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand-logo" data-route="home">
+          <svg class="logo-mark" width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="44" height="44" rx="12" fill="#0B0B14" stroke="#8B5CF6" stroke-width="2" />
+            <path d="M16 35V13H26.5C30.9183 13 34.5 16.5817 34.5 21C34.5 25.4183 30.9183 29 26.5 29H21.5" stroke="#22D3EE" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="26.5" cy="21" r="2.6" fill="#A855F7" />
+          </svg>
+          <div class="logo-text">
+            <span class="logo-title">PIXORA</span>
+            <span class="logo-sub">DIGITAL</span>
+          </div>
+        </a>
+        <p>Custom website development agency building fast, modern, conversion-driven web experiences.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="#home" data-route="home">Home</a>
+        <a href="#about" data-route="about">About Studio</a>
+        <a href="#services" data-route="services">Services</a>
+        <a href="#portfolio" data-route="portfolio">Portfolio</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Agency</h4>
+        <a href="#pricing-section" data-scroll="pricing-section">Pricing Tiers</a>
+        <a href="#inquiry-section" data-scroll="inquiry-section">Start a Project</a>
+        <a href="javascript:void(0)" class="open-urban-demo">Urban Thread Demo</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <a href="mailto:hello@pixoradigital.com">hello@pixoradigital.com</a>
+        <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer">WhatsApp Desk</a>
+        <span>Lahore • Remote Worldwide</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> Pixora Digital. All rights reserved.</p>
+      <p>Engineered with precision by Pixora Digital.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Contact Button -->
+  <a
+    href="https://wa.me/923001234567?text=Hi%20Pixora%20Digital!%20I%20visited%20your%20website%20and%20want%20to%20discuss%20a%20custom%20website."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact Pixora Digital on WhatsApp"
+  >
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.375c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.438 1.344-2 1.422-.516.078-1.172.109-1.891-.125-.438-.141-1-.328-1.719-.641-3.016-1.297-4.984-4.328-5.141-4.531-.141-.203-1.234-1.641-1.234-3.125s.781-2.219 1.063-2.516c.281-.297.609-.375.813-.375.203 0 .406 0 .578.016.188.016.438-.078.688.516.25.609.859 2.094.938 2.25.078.156.125.344.031.547-.109.203-.156.328-.313.5-.156.172-.328.391-.469.516-.156.156-.313.328-.141.641.172.313.781 1.281 1.672 2.078 1.156 1.031 2.125 1.359 2.438 1.516.313.156.484.125.672-.078.188-.203.781-.906.984-1.219.203-.313.406-.266.688-.156.281.109 1.781.844 2.094 1 .313.156.516.234.594.359.078.141.078.797-.172 1.5z"/>
+    </svg>
+  </a>
+
+  <!-- Interactive URBAN THREAD Demo Showcase Modal -->
+  <div class="demo-modal-backdrop" id="urban-demo-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="urban-modal-title">
+    <div class="demo-modal-window">
+      <div class="demo-chrome-bar">
+        <div class="demo-chrome-left">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <span class="demo-url-pill">https://urbanthread.studio — Built by Pixora Digital</span>
+        </div>
+        <button class="demo-close-btn" id="close-urban-demo" aria-label="Close Live Demo">&times;</button>
+      </div>
+
+      <div class="urban-site-canvas">
+        <header class="urban-nav">
+          <div class="urban-logo" id="urban-modal-title">URBAN THREAD<sup>&reg;</sup></div>
+          <div class="urban-nav-pills">
+            <button class="urban-tab active" data-look="obsidian">Drop 01 // Obsidian</button>
+            <button class="urban-tab" data-look="cyber">Drop 02 // Cyber Mist</button>
+            <button class="urban-tab" data-look="monolith">Drop 03 // Monolith</button>
+          </div>
+          <span class="urban-tag">CONCEPT WEBSITE PREVIEW</span>
+        </header>
+
+        <div class="urban-hero">
+          <div class="urban-hero-text">
+            <span class="urban-season">AUTUMN / WINTER EDITORIAL — 2026</span>
+            <h2 id="urban-look-title">OBSIDIAN UTILITY CAPSULE</h2>
+            <p id="urban-look-desc">
+              Technical ripstop silhouettes engineered with architectural tailoring, reflective seams, and kinetic comfort. Designed as a flagship editorial showcase by Pixora Digital.
+            </p>
+            <div class="urban-specs">
+              <div><small>FABRIC</small><strong id="urban-spec-fabric">3L Gore-Tex Matte</strong></div>
+              <div><small>PALETTE</small><strong id="urban-spec-palette">Carbon / Violet</strong></div>
+              <div><small>UX SCORE</small><strong>99/100 Speed</strong></div>
+            </div>
+          </div>
+
+          <div class="urban-lookbook-card" id="urban-lookbook-card">
+            <div class="lookbook-badge" id="urban-look-badge">LOOK 01</div>
+            <div class="lookbook-silhouette">
+              <div class="silhouette-ring"></div>
+              <span id="urban-garment-code">UT-01 // SHELL JACKET</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="urban-demo-footer">
+          <span>Want a custom brand website like <strong>URBAN THREAD</strong>?</span>
+          <button class="btn btn-primary btn-sm" id="inquire-like-urban">Request This Style</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
